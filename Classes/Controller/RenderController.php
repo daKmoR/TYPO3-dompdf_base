@@ -36,6 +36,7 @@ class RenderController {
 		if (array_key_exists('pdf', $_GET) && $_GET['pdf'] === '1') {
 			if ($settings['allowPdf']) {
 				$this->generatePdf($pObj['pObj']->content, $settings);
+				die();
 			} else {
 				$pObj['pObj']->content = 'The Typoscript Setting for this page must have "plugin.tx_dompdfbase.settings.allowPdf = 1" in order to generate a pdf';
 			}
