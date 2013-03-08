@@ -1,3 +1,3 @@
 [submodule "Resources/Private/Php/DomPdf"]
 	path = Resources/Private/Php/DomPdf
-	url = https://github.com/dompdf/dompdf.git
+	url = https://github.com/moodley/dompdf.git
