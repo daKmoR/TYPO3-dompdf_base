@@ -1,4 +1,7 @@
 plugin.tx_dompdfbase.settings {
+	allowPdf = 1
+	allowPrint = 1
+
 	DOMPDF_UNICODE_ENABLED = TRUE
 	DOMPDF_ENABLE_FONTSUBSETTING = FALSE
 	DOMPDF_PDF_BACKEND = CPDF
@@ -10,10 +13,20 @@ plugin.tx_dompdfbase.settings {
 	DOMPDF_ENABLE_REMOTE = TRUE
 	DOMPDF_ENABLE_CSS_FLOAT = FALSE
 	DOMPDF_ENABLE_HTML5PARSER = TRUE
+	DOMPDF_FONT_HEIGHT_RATIO = 1.1
 	DOMPDF_DPI = 96
+	DOMPDF_FONT_DIR = EXT:dompdf_base/Resources/Private/Php/DomPdf/lib/fonts/
 
-	allowPdf = 1
-	allowPrint = 1
+	DEBUGPNG = FALSE
+	DEBUGKEEPTEMP = FALSE
+	DEBUGCSS = FALSE
+
+	DEBUG_LAYOUT = FALSE
+	DEBUG_LAYOUT_LINES = TRUE
+	DEBUG_LAYOUT_BLOCKS = TRUE
+	DEBUG_LAYOUT_INLINE = TRUE
+	DEBUG_LAYOUT_PADDINGBOX = TRUE
+
 	# [0 | 1] open in browser or force download
 	forceDownloadOfPdf = 0
 }
