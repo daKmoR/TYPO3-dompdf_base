@@ -59,7 +59,7 @@ class RenderController {
 		define('DOMPDF_DEFAULT_MEDIA_TYPE', $settings['DOMPDF_DEFAULT_MEDIA_TYPE']);
 		define('DOMPDF_DEFAULT_PAPER_SIZE', $settings['DOMPDF_DEFAULT_PAPER_SIZE']);
 		define('DOMPDF_DEFAULT_FONT', $settings['DOMPDF_DEFAULT_FONT']);
-		define('DOMPDF_DPI', 96);
+		define('DOMPDF_DPI', $settings['DOMPDF_DPI']);
 		define('DOMPDF_ENABLE_PHP', $settings['DOMPDF_ENABLE_PHP']);
 		define('DOMPDF_ENABLE_JAVASCRIPT', $settings['DOMPDF_ENABLE_JAVASCRIPT']);
 		define('DOMPDF_ENABLE_REMOTE', $settings['DOMPDF_ENABLE_REMOTE']);
@@ -121,6 +121,7 @@ class RenderController {
 			$value = $value === 'FALSE' || $value === 'false' ? TRUE : $value;
 			$newSettings[$setting] = $value;
 		}
+		$newSettings['DOMPDF_DPI'] = intval($settings['DOMPDF_DPI']);
 		return $newSettings;
 	}
 
