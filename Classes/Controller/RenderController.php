@@ -43,7 +43,7 @@ class RenderController {
 		}
 
 		if (array_key_exists('print', $_GET) && $_GET['print'] === '1') {
-			if ($settings['allowPdf']) {
+			if ($settings['allowPrint']) {
 				$pObj['pObj']->content = $this->mediaPrintToScreen($pObj['pObj']->content);
 			} else {
 				$pObj['pObj']->content = 'The Typoscript Setting for this page must have "plugin.tx_dompdfbase.settings.allowPrint = 1" in order to display a print version';
